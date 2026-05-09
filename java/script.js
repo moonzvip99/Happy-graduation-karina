@@ -5,12 +5,25 @@ const texts = {
 };
 
 function openEnvelope() {
+    // Ambil elemen audio
+    const audio = document.getElementById("myAudio");
     const env = document.querySelector('.envelope');
     const overlay = document.getElementById('envelopeOverlay');
     const content = document.getElementById('mainContent');
 
+    // --- FITUR AUTOPLAY SETELAH KLIK ---
+    // Atur volume (0.0 sampai 1.0)
+    audio.volume = 0.5; 
+    // Putar musik
+    audio.play().catch(error => {
+        // Ini untuk berjaga-jaga jika browser memblokir
+        console.log("Autoplay dicegah oleh browser, tapi akan berputar setelah interaksi.");
+    });
+
+    // Animasi amplop terbuka
     env.classList.add('open');
 
+    // Transisi ke konten utama
     setTimeout(() => {
         overlay.style.transition = '1.2s';
         overlay.style.opacity = '0';
@@ -19,10 +32,8 @@ function openEnvelope() {
             content.classList.remove('hidden');
             AOS.init({ duration: 1000, once: true });
             
-            // Jalankan animasi mengetik
-            startAllTyping();
-            // Jalankan hujan love otomatis
-            setInterval(createHeart, 400);
+            startAllTyping(); // Jalankan efek mengetik
+            setInterval(createHeart, 400); // Jalankan love melayang
         }, 1000);
     }, 1200);
 }
