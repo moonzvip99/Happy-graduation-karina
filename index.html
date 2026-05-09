@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Scrapbook ✨</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&family=Shadows+Into+Light&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <audio autoplay>
+    <source src="Perunggu - Ini Abadi Video Lirik.mp3" type="audio/mp3"/>
+ </audio>
+
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <!-- AWALAN: AMPLOP -->
+    <div class="envelope-overlay" id="envelopeOverlay">
+        <div class="envelope-wrapper" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="top-flap"></div>
+                <div class="body-env"></div>
+                <div class="seal">❤️</div>
+            </div>
+            <p class="tap-text">Ada surat buat kamu... <br> (Ketuk untuk buka)</p>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <div id="mainContent" class="scrapbook-container hidden">
+        <div class="canvas">
+            
+            <!-- SECTION 1: HEADER -->
+            <header class="section-padding">
+                <h1 class="top-title" data-aos="fade-down">HAPPY GRADUATION SAYANGKU</h1>
+                <div class="floating-item bouquet">
+                    <img src="OIP-removebg-preview.png" alt="Buket">
+                </div>
+                <div class="floating-item grad-cap">
+                    <img src="preview-m2i8H7m2H7b1b1i8-removebg-preview.png" alt="Toga">
+                </div>
+            </header>
+
+            <!-- SECTION 2: POLAROID UTAMA & TYPING TEXT -->
+            <section class="section-padding" style="margin-top: 50px;">
+                <div class="main-photo-group" data-aos="zoom-in">
+                    <div class="polaroid">
+                        <img src="WhatsApp Image 2026-05-09 at 09.59.58.jpeg" alt="Foto">
+                        <p class="caption">The Graduate 🎓</p>
+                    </div>
+                    <div class="sticky-note">
+                        <!-- Teks ini akan diisi oleh animasi mengetik -->
+                        <p id="typing1" class="typing-text"></p>
+                    </div>
+                </div>
+            </section>
+
+  <!-- SECTION 3: FILM STRIP (Gerak Otomatis) -->
+<section class="section-padding">
+    <h2 class="section-title" data-aos="fade-right">our little journey..</h2>
+    <div class="film-strip-container">
+        <div class="film-track">
+            <!-- FOTO SET 1 -->
+            <div class="film-frame"><img src="fotbar 1.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 2.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 3.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 4.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 5.jpeg"></div>
+            
+            <!-- DUPLIKAT FOTO (Agar animasi mulus/seamless) -->
+            <div class="film-frame"><img src="fotbar 1.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 2.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 3.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 4.jpeg"></div>
+            <div class="film-frame"><img src="fotbar 5.jpeg"></div>
+        </div>
+    </div>
+</section>
+
+            <!-- SECTION 4: DECORATIVE QUOTE -->
+            <section class="section-padding" data-aos="fade-in">
+                <div class="quote-box">
+                    <p id="typing2" class="typing-text"></p>
+                </div>
+            </section>
+
+            <!-- SECTION 5: SECONDARY PHOTOS -->
+            <section class="grid-photos">
+                <div class="item small-polaroid" data-aos="fade-left" style="margin-top: 40px;">
+                    <img src="images-removebg-preview.png">
+                </div>
+                <div class="floating-item flower-sticker">
+                    <img src="kembamng.png" alt="Flower">
+                </div>
+            </section>
+
+            <!-- SECTION 6: SURAT PANJANG -->
+            <section class="long-letter-section" data-aos="flip-up">
+                <div class="paper">
+                    <h3 class="sacramento">Dear, Karina Cantikku</h3>
+                    <p id="typing3" class="typing-text-long"></p>
+                    <p class="signature">With love, <br> Parhan Sigma</p>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <div class="stars">✨ ✨ ✨</div>
+                <button class="btn-love" onclick="makeItRain()">You deserve all the love! ❤️</button>
+                <p style="font-size: 0.6rem; margin-top: 20px; opacity: 0.5;">Scroll ke atas lagi untuk liat memori kita</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="java/script.js"></script>
+</body>
+</html>
